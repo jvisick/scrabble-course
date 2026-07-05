@@ -1,0 +1,165 @@
+/* course.css — shared stylesheet for the Scrabble teaching workspace.
+   Tufte-inspired: generous margins, readable measure, restrained palette.
+   Linked by every lesson and reference sheet. Prints cleanly to paper. */
+
+:root {
+  --ink:       #2a2724;
+  --ink-soft:  #6b655d;
+  --paper:     #fdfcf9;
+  --rule:      #e4dfd4;
+  --accent:    #7d2b1f;   /* deep brick red — links, emphasis */
+  --tile-bg:   #e8d9b0;   /* Scrabble-tile cream */
+  --tile-edge: #c9b184;
+  --tile-ink:  #33302b;
+  --good:      #2f6b3a;
+  --bad:       #9c2c2c;
+  --dl:        #b9d4e6;   /* double letter */
+  --tl:        #4f97c4;   /* triple letter */
+  --dw:        #efb8c0;   /* double word  */
+  --tw:        #d1493f;   /* triple word  */
+  --measure:   38rem;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 18px; }
+
+body {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+  max-width: var(--measure);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Typography ---- */
+h1, h2, h3 { font-weight: 600; line-height: 1.15; letter-spacing: -0.01em; }
+h1 { font-size: 2.1rem; margin: 0 0 0.2rem; }
+h2 { font-size: 1.4rem; margin: 2.6rem 0 0.6rem; }
+h3 { font-size: 1.1rem; margin: 1.8rem 0 0.4rem; }
+
+.kicker {
+  font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--accent); font-weight: 700; margin: 0 0 0.6rem;
+}
+.subtitle { color: var(--ink-soft); font-style: italic; font-size: 1.05rem; margin: 0 0 1.5rem; }
+
+p, li { font-size: 1rem; }
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--rule); }
+a:hover { border-bottom-color: var(--accent); }
+
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2.4rem 0; }
+
+strong { font-weight: 700; }
+em { font-style: italic; }
+
+/* ---- Sidenote / margin note ---- */
+.note {
+  font-size: 0.85rem; color: var(--ink-soft); line-height: 1.4;
+  border-left: 2px solid var(--rule); padding-left: 0.9rem; margin: 1.2rem 0;
+}
+.cite { font-size: 0.8rem; color: var(--ink-soft); }
+.cite a { border: 0; text-decoration: underline; text-decoration-color: var(--rule); }
+
+/* ---- Callout boxes ---- */
+.callout {
+  background: #fff; border: 1px solid var(--rule); border-left: 4px solid var(--accent);
+  border-radius: 3px; padding: 1rem 1.2rem; margin: 1.4rem 0;
+}
+.callout .label {
+  font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent); font-weight: 700; display: block; margin-bottom: 0.35rem;
+}
+.callout.win { border-left-color: var(--good); }
+.callout.win .label { color: var(--good); }
+
+/* ---- Scrabble tiles ---- */
+.tile {
+  display: inline-flex; align-items: center; justify-content: center;
+  position: relative;
+  width: 2.1rem; height: 2.1rem; margin: 0.12rem;
+  background: var(--tile-bg); border: 1px solid var(--tile-edge);
+  border-radius: 4px; box-shadow: 0 1.5px 0 var(--tile-edge), 0 2px 3px rgba(0,0,0,0.12);
+  font-family: Georgia, serif; font-weight: 700; font-size: 1.1rem;
+  color: var(--tile-ink); text-transform: uppercase; vertical-align: middle;
+  user-select: none;
+}
+.tile .pts {
+  position: absolute; right: 2px; bottom: 0px;
+  font-size: 0.5rem; font-weight: 600; line-height: 1;
+}
+.tile.blank { color: var(--ink-soft); background: #f3ecd8; }
+.rack { display: flex; flex-wrap: wrap; gap: 0.1rem; margin: 1rem 0; }
+
+/* Word tile-strip, compact (for word lists) */
+.word { display: inline-flex; gap: 1px; margin: 0.2rem 0.5rem 0.2rem 0; }
+.word .tile { width: 1.5rem; height: 1.5rem; font-size: 0.8rem; box-shadow: 0 1px 0 var(--tile-edge); }
+.word .tile .pts { display: none; }
+
+/* ---- Word-list grid (reference sheets) ---- */
+.wordgrid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(3.2rem, 1fr));
+  gap: 0.3rem 0.5rem; margin: 0.8rem 0 1.4rem;
+}
+.wordgrid .w {
+  font-family: "SF Mono", "Menlo", monospace; font-size: 0.95rem; font-weight: 600;
+  text-align: center; padding: 0.25rem 0; background: var(--tile-bg);
+  border: 1px solid var(--tile-edge); border-radius: 3px; letter-spacing: 0.05em;
+}
+.grouphead {
+  font-family: Georgia, serif; font-size: 1.3rem; font-weight: 700; color: var(--accent);
+  margin: 1.2rem 0 0.3rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.2rem;
+}
+
+/* ---- Board premium legend ---- */
+.premium { display: inline-block; padding: 0.05rem 0.4rem; border-radius: 3px; font-size: 0.8rem; font-weight: 600; }
+.premium.dl { background: var(--dl); } .premium.tl { background: var(--tl); color:#fff; }
+.premium.dw { background: var(--dw); } .premium.tw { background: var(--tw); color:#fff; }
+
+/* ---- Footer nav ---- */
+.pagenav {
+  margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--rule);
+  display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between;
+  font-size: 0.85rem; color: var(--ink-soft);
+}
+.ask {
+  margin-top: 2.4rem; background: #fbf4e9; border: 1px dashed var(--tile-edge);
+  border-radius: 4px; padding: 0.9rem 1.1rem; font-size: 0.9rem; color: var(--ink-soft);
+}
+.ask strong { color: var(--ink); }
+
+/* ---- Interactive quiz / flashcard widget (quiz.js) ---- */
+.quiz {
+  background: #fff; border: 1px solid var(--rule); border-radius: 6px;
+  padding: 1.4rem; margin: 1.4rem 0; text-align: center;
+}
+.quiz-stat { font-size: 0.78rem; color: var(--ink-soft); letter-spacing: 0.03em; }
+.quiz-word { font-size: 1.6rem; margin: 1rem 0; min-height: 2.2rem; }
+.quiz .flash { font-size: 1.15rem; padding: 1.2rem 0.5rem; }
+.quiz-btns { display: flex; gap: 0.6rem; justify-content: center; margin-top: 0.6rem; }
+.quiz button {
+  font-family: inherit; font-size: 0.95rem; padding: 0.5rem 1.1rem; cursor: pointer;
+  background: var(--tile-bg); border: 1px solid var(--tile-edge); border-radius: 4px;
+  color: var(--tile-ink); transition: transform 0.06s ease, background 0.15s ease;
+}
+.quiz button:hover:not(:disabled) { background: #f0e3c0; transform: translateY(-1px); }
+.quiz button.next { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 600; }
+.quiz button.next:hover { background: #66231a; }
+.quiz button:disabled { opacity: 0.55; cursor: default; }
+.quiz-fb { min-height: 2.6rem; margin-top: 0.9rem; font-size: 0.92rem; line-height: 1.35; }
+.quiz-fb.good { color: var(--good); }
+.quiz-fb.bad  { color: var(--bad); }
+.quiz.done .quiz-word { font-size: 2.6rem; color: var(--accent); }
+
+/* ---- Print ---- */
+@media print {
+  html { font-size: 12pt; }
+  body { padding: 0; max-width: none; background: #fff; }
+  a { color: var(--ink); }
+  .ask, .pagenav { display: none; }
+  .tile, .wordgrid .w { box-shadow: none; }
+  .callout { break-inside: avoid; }
+}
