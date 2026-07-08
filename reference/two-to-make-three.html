@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reference · 2s to Make 3s — The Hook Chart (NWL2023)</title>
+<link rel="stylesheet" href="../assets/course.css">
+<style>
+  .hooktable { margin: 0.5rem 0 1.4rem; }
+  .hookrow {
+    display: grid; grid-template-columns: 1fr 3.2rem 1fr;
+    align-items: center; gap: 0.9rem;
+    padding: 0.14rem 0.3rem; border-bottom: 1px dotted var(--rule);
+  }
+  .hookrow .hw {
+    font-family: "SF Mono", "Menlo", monospace; font-weight: 700; font-size: 1rem;
+    text-align: center; letter-spacing: 0.08em;
+    background: var(--tile-bg); border: 1px solid var(--tile-edge); border-radius: 3px;
+    padding: 0.1rem 0;
+  }
+  .hookrow .fh, .hookrow .bh {
+    font-family: "SF Mono", "Menlo", monospace; font-size: 0.85rem;
+    letter-spacing: 0.22em; color: var(--ink);
+  }
+  .hookrow .fh { text-align: right; }
+  .hookrow .none { color: var(--rule); letter-spacing: 0; }
+  .hookrow .bh .s { color: var(--good); font-weight: 800; }
+  .hookrow.nos .hw { background: #f3d0d0; border-color: #d89a9a; }
+  .legend { display: flex; flex-wrap: wrap; gap: 0.5rem 1.4rem; font-size: 0.85rem;
+    color: var(--ink-soft); margin: 0.8rem 0 1.4rem; }
+  .legend .chip { display:inline-block; padding:0 0.35rem; border-radius:3px;
+    border:1px solid var(--tile-edge); background: var(--tile-bg);
+    font-family:"SF Mono","Menlo",monospace; font-size:0.8rem; }
+  .legend .chip.nos { background:#f3d0d0; border-color:#d89a9a; }
+  .noslist { font-family: "SF Mono", "Menlo", monospace; font-size: 0.95rem;
+    letter-spacing: 0.1em; line-height: 1.9; }
+  @media print { .hookrow { break-inside: avoid; } }
+</style>
+</head>
+<body>
+
+<p class="kicker">Reference Sheet · NWL2023</p>
+<h1>2s to Make 3s — The Hook Chart</h1>
+<p class="subtitle">Every letter that grows each two-letter word into a three-letter word. Read a row as: <em>front hooks &rarr; WORD &rarr; back hooks</em>.</p>
+
+<p>A <strong>hook</strong> is a single letter added to the front or back of a word on the board to make a new word. This chart shows every legal hook of all <a href="two-letter-words.html">107 two-letter words</a> &mdash; <strong>850 of the 1,085</strong> three-letter words in NWL2023 are one hook away from a 2. Example row: <span class="chip" style="font-family:inherit"><code>bcefgjlmoptvwy&nbsp;<strong>AR</strong>&nbsp;bcefkmost</code></span> means B&#8203;AR, C&#8203;AR &hellip; are words, and AR&#8203;B, AR&#8203;C &hellip; are words.</p>
+
+<div class="legend">
+  <span><b class="s" style="color:var(--good)">s</b> &mdash; takes a final S (75 do)</span>
+  <span><span class="chip nos">RED</span> &mdash; does <strong>not</strong> take S (32 traps)</span>
+  <span>&mdash; &mdash; no hooks on that side</span>
+</div>
+
+<div class="callout">
+  <span class="label">The S-question &mdash; the 32 that refuse an S</span>
+  <p style="margin:0.3rem 0 0.5rem">Before you pluralize a 2 in a real game, check it against this list. These <strong>do not</strong> take an S:</p>
+  <p class="noslist">AE&ensp;AM&ensp;AN&ensp;AW&ensp;AX&ensp;DE&ensp;EH&ensp;ET&ensp;EW&ensp;EX&ensp;HM&ensp;IS&ensp;JO&ensp;LO&ensp;MM&ensp;MY&ensp;NA&ensp;NE&ensp;OF&ensp;OI&ensp;OK&ensp;OS&ensp;OW&ensp;OX&ensp;OY&ensp;SH&ensp;TO&ensp;UH&ensp;US&ensp;WE&ensp;XU&ensp;YO</p>
+  <p style="margin:0.4rem 0 0" class="cite">Famous traps: JO pluralizes as JOES, AX and OX as AXES and OXEN/OXES (4+ letters), and XU is already its own plural &mdash; the only 2 with no hooks at all.</p>
+</div>
+
+<div class="grouphead">A</div>
+<div class="hooktable">
+<div class="hookrow"><span class="fh">b</span><span class="hw">AA</span><span class="bh">hl<b class="s">s</b></span></div>
+<div class="hookrow"><span class="fh">cdfgjklnstw</span><span class="hw">AB</span><span class="bh">a<b class="s">s</b>y</span></div>
+<div class="hookrow"><span class="fh">bcdfghlmprstw</span><span class="hw">AD</span><span class="bh">do<b class="s">s</b>z</span></div>
+<div class="hookrow nos"><span class="fh">bghkmnstw</span><span class="hw">AE</span><span class="bh"><span class="none">&mdash;</span></span></div>
+<div class="hookrow"><span class="fh">bdfghjlmnrstwyz</span><span class="hw">AG</span><span class="bh">aeo<b class="s">s</b></span></div>
+<div class="hookrow"><span class="fh">abdfhlnpry</span><span class="hw">AH</span><span class="bh">ai<b class="s">s</b></span></div>
+<div class="hookrow"><span class="fh">r</span><span class="hw">AI</span><span class="bh">dlmnr<b class="s">s</b>t</span></div>
+<div class="hookrow"><span class="fh">abcdgps</span><span class="hw">AL</span><span class="bh">abelp<b class="s">s</b>t</span></div>
+<div class="hookrow nos"><span class="fh">bcdfghjlmnprty</span><span class="hw">AM</span><span class="bh">aipu</span></div>
+<div class="hookrow nos"><span class="fh">bcdfgmnprstvw</span><span class="hw">AN</span><span class="bh">adeity</span></div>
+<div class="hookrow"><span class="fh">bcefgjlmoptvwy</span><span class="hw">AR</span><span class="bh">bcefkmo<b class="s">s</b>t</span></div>
+<div class="hookrow"><span class="fh">abdfghklmprtvwyz</span><span class="hw">AS</span><span class="bh">hkp<b class="s">s</b></span></div>
+<div class="hookrow"><span class="fh">bcefghklmopqrstvw</span><span class="hw">AT</span><span class="bh">e<b class="s">s</b>t</span></div>
+<div class="hookrow nos"><span class="fh">cdhjlmnprstvwy</span><span class="hw">AW</span><span class="bh">aeln</span></div>
+<div class="hookrow nos"><span class="fh">flmprstvwz</span><span class="hw">AX</span><span class="bh">e</span></div>
+<div class="hookrow"><span class="fh">bcdfghjklmnprswy</span><span class="hw">AY</span><span class="bh">e<b class="s">s</b></span></div>
+</div>
+<div class="grouphead">B</div>
+<div class="hooktable">
+<div class="hookrow"><span class="fh">ao</span><span class="hw">BA</span><span class="bh">adeghlmnpr<b class="s">s</b>ty</span></div>
+<div class="hookrow"><span class="fh">o</span><span class="hw">BE</span><span class="bh">degln<b class="s">s</b>ty</span></div>
+<div class="hookrow"><span class="fh">o</span><span class="hw">BI</span><span class="bh">bdgno<b class="s">s</b>tz</span></div>
+<div class="hookrow"><span class="fh"><span class="none">&mdash;</span></span><span class="hw">BO</span><span class="bh">abdgop<b class="s">s</b>twxy</span></div>
+<div class="hookrow"><span class="fh">a</span><span class="hw">BY</span><span class="bh">e<b class="s">s</b></span></div>
+</div>
+<div class="grouphead">D</div>
+<div class="hooktable">
+<div class="hookrow"><span class="fh">o</span><span class="hw">DA</span><span class="bh">bdghklmnp<b class="s">s</b>wy</span></div>
+<div class="hookrow nos"><span class="fh">o</span><span class="hw">DE</span><span class="bh">beflnpvwxy</span></div>
+<div class="hookrow"><span class="fh">au</span><span class="hw">DO</span><span class="bh">ceghlmnr<b class="s">s</b>twx</span></div>
+</div>
+<div class="grouphead">E</div>
+<div class="hooktable">
+<div class="hookrow"><span class="fh">bfglmprtwxz</span><span class="hw">ED</span><span class="bh">h<b class="s">s</b></span></div>
+<div class="hookrow"><span class="fh">dkr</span><span class="hw">EF</span><span class="bh">f<b class="s">s</b>t</span></div>
+<div class="hookrow nos"><span class="fh">fhmpy</span><span class="hw">EH</span><span class="bh"><span class="none">&mdash;</span></span></div>
+<div class="hookrow"><span class="fh">bcdegmst</span><span class="hw">EL</span><span class="bh">dfklm<b class="s">s</b></span></div>
+<div class="hookrow"><span class="fh">fghmr</span><span class="hw">EM</span><span class="bh">eo<b class="s">s</b>u</span></div>
+<div class="hookrow"><span class="fh">bdfghkmpstwyz</span><span class="hw">EN</span><span class="bh">dg<b class="s">s</b></span></div>
+<div class="hookrow"><span class="fh">fhpsy</span><span class="hw">ER</span><span class="bh">aegnr<b class="s">s</b></span></div>
+<div class="hookrow"><span class="fh">bfhmoprty</span><span class="hw">ES</span><span class="bh"><b class="s">s</b>t</span></div>
+<div class="hookrow nos"><span class="fh">bfghjlmnprstvwy</span><span class="hw">ET</span><span class="bh">ah</span></div>
+<div class="hookrow nos"><span class="fh">defhmnpsty</span><span class="hw">EW</span><span class="bh">e</span></div>
+<div class="hookrow nos"><span class="fh">dhklrsv</span><span class="hw">EX</span><span class="bh"><span class="none">&mdash;</span></span></div>
+</div>
+<div class="grouphead">F</div>
+<div class="hooktable">
+<div class="hookrow"><span class="fh"><span class="none">&mdash;</span></span><span class="hw">FA</span><span class="bh">bdghmnr<b class="s">s</b>tvxy</span></div>
+<div class="hookrow"><span class="fh"><span class="none">&mdash;</span></span><span class="hw">FE</span><span class="bh">dehmnr<b class="s">s</b>tuwyz</span></div>
+</div>
+<div class="grouphead">G</div>
+<div class="hooktable">
+<div class="hookrow"><span class="fh"><span class="none">&mdash;</span></span><span class="hw">GI</span><span class="bh">bdefgnp<b class="s">s</b>t</span></div>
+<div class="hookrow"><span class="fh">ae</span><span class="hw">GO</span><span class="bh">abdor<b class="s">s</b>txy</span></div>
+</div>
+<div class="grouphead">H</div>
+<div class="hooktable">
+<div class="hookrow"><span class="fh">asw</span><span class="hw">HA</span><span class="bh">deghjmop<b class="s">s</b>twy</span></div>
+<div class="hookrow"><span class="fh">st</span><span class="hw">HE</span><span class="bh">hmnpr<b class="s">s</b>twxy</span></div>
+<div class="hookrow"><span class="fh">acgkp</span><span class="hw">HI</span><span class="bh">cdemnp<b class="s">s</b>t</span></div>
+<div class="hookrow nos"><span class="fh">o</span><span class="hw">HM</span><span class="bh">m</span></div>
+<div class="hookrow"><span class="fh">moprstw</span><span class="hw">HO</span><span class="bh">bdegmnop<b class="s">s</b>twy</span></div>
+</div>
+<div class="grouphead">I</div>
+<div class="hooktable">
+<div class="hookrow"><span class="fh">abdfghklmrv</span><span class="hw">ID</span><span class="bh"><b class="s">s</b></span></div>
+<div class="hookrow"><span class="fh">dgkr</span><span class="hw">IF</span><span class="bh">f<b class="s">s</b></span></div>
+<div class="hookrow"><span class="fh">abdfghjklprstvwyz</span><span class="hw">IN</span><span class="bh">kn<b class="s">s</b></span></div>
+<div class="hookrow nos"><span class="fh">abcdghklmpqstvwx</span><span class="hw">IS</span><span class="bh">m</span></div>
+<div class="hookrow"><span class="fh">abdfghklnpstwz</span><span class="hw">IT</span><span class="bh"><b class="s">s</b></span></div>
+</div>
+<div class="grouphead">J</div>
+<div class="hooktable">
+<div class="hookrow nos"><span class="fh"><span class="none">&mdash;</span></span><span class="hw">JO</span><span class="bh">begtwy</span></div>
+</div>
+<div class="grouphead">K</div>
+<div class="hooktable">
+<div class="hookrow"><span class="fh">os</span><span class="hw">KA</span><span class="bh">bef<b class="s">s</b>ty</span></div>
+<div class="hookrow"><span class="fh">s</span><span class="hw">KI</span><span class="bh">dfnpr<b class="s">s</b>t</span></div>
+</div>
+<div class="grouphead">L</div>
+<div class="hooktable">
+<div class="hookrow"><span class="fh">a</span><span class="hw">LA</span><span class="bh">bcdghmpr<b class="s">s</b>tvwxy</span></div>
+<div class="hookrow"><span class="fh"><span class="none">&mdash;</span></span><span class="hw">LI</span><span class="bh">bdenp<b class="s">s</b>t</span></div>
+<div class="hookrow nos"><span class="fh"><span class="none">&mdash;</span></span><span class="hw">LO</span><span class="bh">bcgoprtwx</span></div>
+</div>
+<div class="grouphead">M</div>
+<div class="hooktable">
+<div class="hookrow"><span class="fh">ao</span><span class="hw">MA</span><span class="bh">cdegmnpr<b class="s">s</b>twxy</span></div>
+<div class="hookrow"><span class="fh">e</span><span class="hw">ME</span><span class="bh">dghlmn<b class="s">s</b>tw</span></div>
+<div class="hookrow"><span class="fh">a</span><span class="hw">MI</span><span class="bh">bcdglmr<b class="s">s</b>x</span></div>
+<div class="hookrow nos"><span class="fh">hmu</span><span class="hw">MM</span><span class="bh">m</span></div>
+<div class="hookrow"><span class="fh">e</span><span class="hw">MO</span><span class="bh">abcdgilmnopr<b class="s">s</b>tw</span></div>
+<div class="hookrow"><span class="fh">ae</span><span class="hw">MU</span><span class="bh">dgmn<b class="s">s</b>tx</span></div>
+<div class="hookrow nos"><span class="fh"><span class="none">&mdash;</span></span><span class="hw">MY</span><span class="bh">c</span></div>
+</div>
+<div class="grouphead">N</div>
+<div class="hooktable">
+<div class="hookrow nos"><span class="fh">a</span><span class="hw">NA</span><span class="bh">beghmnpvwy</span></div>
+<div class="hookrow nos"><span class="fh">ao</span><span class="hw">NE</span><span class="bh">begtw</span></div>
+<div class="hookrow"><span class="fh">o</span><span class="hw">NO</span><span class="bh">bdghmor<b class="s">s</b>tw</span></div>
+<div class="hookrow"><span class="fh">g</span><span class="hw">NU</span><span class="bh">bgn<b class="s">s</b>t</span></div>
+</div>
+<div class="grouphead">O</div>
+<div class="hooktable">
+<div class="hookrow"><span class="fh">bcghmnprsty</span><span class="hw">OD</span><span class="bh">ade<b class="s">s</b></span></div>
+<div class="hookrow"><span class="fh">dfhjrtvw</span><span class="hw">OE</span><span class="bh"><b class="s">s</b></span></div>
+<div class="hookrow nos"><span class="fh">o</span><span class="hw">OF</span><span class="bh">ft</span></div>
+<div class="hookrow"><span class="fh">dfnops</span><span class="hw">OH</span><span class="bh">mo<b class="s">s</b></span></div>
+<div class="hookrow nos"><span class="fh">kmp</span><span class="hw">OI</span><span class="bh">kl</span></div>
+<div class="hookrow nos"><span class="fh">wy</span><span class="hw">OK</span><span class="bh">ae</span></div>
+<div class="hookrow"><span class="fh">dhmnprsty</span><span class="hw">OM</span><span class="bh">a<b class="s">s</b></span></div>
+<div class="hookrow"><span class="fh">cdefhimstwy</span><span class="hw">ON</span><span class="bh">eo<b class="s">s</b></span></div>
+<div class="hookrow"><span class="fh">bcfhklmpst</span><span class="hw">OP</span><span class="bh">ae<b class="s">s</b>t</span></div>
+<div class="hookrow"><span class="fh">cdfgklmnt</span><span class="hw">OR</span><span class="bh">abceg<b class="s">s</b>t</span></div>
+<div class="hookrow nos"><span class="fh">bcdghkmnpsw</span><span class="hw">OS</span><span class="bh">e</span></div>
+<div class="hookrow nos"><span class="fh">bcdhjlmnprstvwy</span><span class="hw">OW</span><span class="bh">elnt</span></div>
+<div class="hookrow nos"><span class="fh">bcdfglpsv</span><span class="hw">OX</span><span class="bh">oy</span></div>
+<div class="hookrow nos"><span class="fh">bcfghjst</span><span class="hw">OY</span><span class="bh"><span class="none">&mdash;</span></span></div>
+</div>
+<div class="grouphead">P</div>
+<div class="hooktable">
+<div class="hookrow"><span class="fh">os</span><span class="hw">PA</span><span class="bh">cdhklmnpr<b class="s">s</b>twxy</span></div>
+<div class="hookrow"><span class="fh">ao</span><span class="hw">PE</span><span class="bh">acdeghnpr<b class="s">s</b>tw</span></div>
+<div class="hookrow"><span class="fh"><span class="none">&mdash;</span></span><span class="hw">PI</span><span class="bh">acegnp<b class="s">s</b>tux</span></div>
+<div class="hookrow"><span class="fh">au</span><span class="hw">PO</span><span class="bh">dhilmop<b class="s">s</b>twx</span></div>
+</div>
+<div class="grouphead">Q</div>
+<div class="hooktable">
+<div class="hookrow"><span class="fh"><span class="none">&mdash;</span></span><span class="hw">QI</span><span class="bh"><b class="s">s</b></span></div>
+</div>
+<div class="grouphead">R</div>
+<div class="hooktable">
+<div class="hookrow"><span class="fh">aeio</span><span class="hw">RE</span><span class="bh">bcdefgimp<b class="s">s</b>tvxz</span></div>
+</div>
+<div class="grouphead">S</div>
+<div class="hooktable">
+<div class="hookrow nos"><span class="fh">a</span><span class="hw">SH</span><span class="bh">aehoy</span></div>
+<div class="hookrow"><span class="fh">p</span><span class="hw">SI</span><span class="bh">bcgmnpr<b class="s">s</b>tx</span></div>
+<div class="hookrow"><span class="fh"><span class="none">&mdash;</span></span><span class="hw">SO</span><span class="bh">bcdhlmnp<b class="s">s</b>tuwxy</span></div>
+</div>
+<div class="grouphead">T</div>
+<div class="hooktable">
+<div class="hookrow"><span class="fh">eu</span><span class="hw">TA</span><span class="bh">bdegjmnopr<b class="s">s</b>tuvwx</span></div>
+<div class="hookrow"><span class="fh">au</span><span class="hw">TE</span><span class="bh">acdegln<b class="s">s</b>tw</span></div>
+<div class="hookrow"><span class="fh"><span class="none">&mdash;</span></span><span class="hw">TI</span><span class="bh">celnp<b class="s">s</b>txz</span></div>
+<div class="hookrow nos"><span class="fh"><span class="none">&mdash;</span></span><span class="hw">TO</span><span class="bh">degmnoprtwy</span></div>
+</div>
+<div class="grouphead">U</div>
+<div class="hooktable">
+<div class="hookrow nos"><span class="fh">dh</span><span class="hw">UH</span><span class="bh"><span class="none">&mdash;</span></span></div>
+<div class="hookrow"><span class="fh">bcdghlmrstvy</span><span class="hw">UM</span><span class="bh">mp<b class="s">s</b></span></div>
+<div class="hookrow"><span class="fh">bdfghjlmnprst</span><span class="hw">UN</span><span class="bh">i<b class="s">s</b></span></div>
+<div class="hookrow"><span class="fh">cdhpsty</span><span class="hw">UP</span><span class="bh">o<b class="s">s</b></span></div>
+<div class="hookrow nos"><span class="fh">bjmnps</span><span class="hw">US</span><span class="bh">e</span></div>
+<div class="hookrow"><span class="fh">bcghjmnoprt</span><span class="hw">UT</span><span class="bh">ae<b class="s">s</b></span></div>
+</div>
+<div class="grouphead">W</div>
+<div class="hooktable">
+<div class="hookrow nos"><span class="fh">aeo</span><span class="hw">WE</span><span class="bh">bdent</span></div>
+<div class="hookrow"><span class="fh">t</span><span class="hw">WO</span><span class="bh">ekno<b class="s">s</b>tw</span></div>
+</div>
+<div class="grouphead">X</div>
+<div class="hooktable">
+<div class="hookrow"><span class="fh"><span class="none">&mdash;</span></span><span class="hw">XI</span><span class="bh"><b class="s">s</b></span></div>
+<div class="hookrow nos"><span class="fh"><span class="none">&mdash;</span></span><span class="hw">XU</span><span class="bh"><span class="none">&mdash;</span></span></div>
+</div>
+<div class="grouphead">Y</div>
+<div class="hooktable">
+<div class="hookrow"><span class="fh">pr</span><span class="hw">YA</span><span class="bh">ghkmpr<b class="s">s</b>wy</span></div>
+<div class="hookrow"><span class="fh">abdeklprtw</span><span class="hw">YE</span><span class="bh">ahnpr<b class="s">s</b>twz</span></div>
+<div class="hookrow nos"><span class="fh"><span class="none">&mdash;</span></span><span class="hw">YO</span><span class="bh">bdkmnuw</span></div>
+</div>
+<div class="grouphead">Z</div>
+<div class="hooktable">
+<div class="hookrow"><span class="fh"><span class="none">&mdash;</span></span><span class="hw">ZA</span><span class="bh">gp<b class="s">s</b>x</span></div>
+</div>
+
+<p class="cite">Hook data computed from the complete NWL2023 two- and three-letter word lists in
+<a href="https://www.cross-tables.com/cs.php">&ldquo;The Cheat Sheet&rdquo; (Baron &amp; Lipkin, 2024)</a>,
+cross-checked against <a href="https://wolfberg.net/scrabble/wordlists/NWL2023/twos/">Wolfberg&rsquo;s NWL2023 two-letter list</a>.</p>
+
+<div class="pagenav">
+  <span><a href="../lessons/0002-threes-and-hooks.html">&larr; Lesson 02: The 3s &amp; Your First Hooks</a></span>
+  <span><a href="two-letter-words.html">The 107 Two-Letter Words</a> &middot; <a href="skill-roadmap.html">The 5-Pillar Map</a></span>
+</div>
+
+</body>
+</html>

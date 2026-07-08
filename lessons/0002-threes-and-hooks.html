@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 02 · Grow the 2s: Your First Hooks</title>
+<link rel="stylesheet" href="../assets/course.css">
+<style>
+  .minigrid { display:grid; grid-template-columns:repeat(3, 2.4rem); gap:2px; margin:1rem 0; }
+  .minigrid .tile { width:2.4rem; height:2.4rem; }
+  .minigrid .empty { background:#f1ead9; border:1px solid var(--rule); border-radius:4px; }
+  .minigrid .new { outline: 2px solid var(--good); outline-offset: -2px; }
+  .noslist { font-family:"SF Mono","Menlo",monospace; font-size:0.95rem; letter-spacing:0.1em; line-height:1.9; }
+</style>
+</head>
+<body>
+
+<p class="kicker">Lesson 02 · Pillar 1: Words</p>
+<h1>Grow the 2s: Your First Hooks</h1>
+<p class="subtitle">You spent Lesson 01 learning 107 small words. Today you learn that most of the 3s are hiding inside them.</p>
+
+<p><strong>Today's win:</strong> learn to <em>hook</em> — grow a word already on the board by one letter — and walk away knowing the answer to the single most game-useful question about the 2s: <strong>does it take an S?</strong></p>
+
+<h2>Warm-up: are the 2s still there? <span class="cite">(60 seconds)</span></h2>
+
+<p>Two days since Lesson 01 — perfect timing. Recalling something <em>just as it starts to fade</em> is exactly what cements it. Eight quick ones, cold:</p>
+
+<div id="warmup"></div>
+
+<p class="note">Missed some? Normal — that struggle is the workout. Run the <a href="0001-two-letter-words.html">Lesson 01 drill</a> again after this lesson, not instead of it.</p>
+
+<h2>One letter, whole new word</h2>
+
+<p>A <strong>hook</strong> is a single letter added to the front or back of a word on the board to make a new word. Add to the front (<strong>H</strong> + AT → HAT): a <em>front hook</em>. Add to the end (AT + <strong>E</strong> → ATE): a <em>back hook</em>.</p>
+
+<p>Here's why this is the natural next step after the 2s: of the <strong>1,085</strong> three-letter words in NWL2023, <strong>850 — nearly 8 in 10 — are a two-letter word plus one hook</strong>. You are not starting a new list today. You're extending one you already own. And the short words are the game: about <strong>75% of all words played come from the 2s, 3s, and 4s</strong> <span class="cite">(<a href="https://www.cross-tables.com/download/SCRABBLE_TIPS.pdf">Baron, <em>Scrabble Tips</em></a>)</span>.</p>
+
+<p>The payoff isn't the three points. A hook is a <em>door</em>: it lets you attach a whole new word of your own to a board that looked closed. The classic move — hook an S onto something, and play your own word through that S:</p>
+
+<div class="callout">
+  <span class="label">The S-hook play</span>
+  The board has <span class="word"><span class="tile">Q</span><span class="tile">I</span></span> on it. You hold an S, a U, and an N. Drop the S after QI and run SUN downward from it:
+  <div class="minigrid">
+    <span class="tile">Q</span><span class="tile">I</span><span class="tile new">S</span>
+    <span class="empty"></span><span class="empty"></span><span class="tile new">U</span>
+    <span class="empty"></span><span class="empty"></span><span class="tile new">N</span>
+  </div>
+  One S, two scores: <strong>QIS</strong> (12) <em>and</em> <strong>SUN</strong> — in a spot where nothing else fit. This works with any back hook: the hooked letter becomes the first (or last) letter of your own perpendicular word. <em>But it only works if QIS is actually a word.</em> Which brings us to&hellip;
+</div>
+
+<h2>The S-question</h2>
+
+<p>S is the best hooking letter in the game — so good that Baron lists the four S's with the blanks, J, Q, X and Z as the ten <strong>power tiles</strong> <span class="cite">(<a href="https://www.cross-tables.com/download/SCRABBLE_TIPS.pdf">Scrabble Tips</a>, §2d)</span>. But it doesn't work everywhere, and guessing wrong costs you a turn:</p>
+
+<ul>
+  <li><strong>75 of the 107</strong> two-letter words take a final S: QI→QIS, ZA→ZAS, KA→KAS, even AA→AAS.</li>
+  <li><strong>32 refuse it.</strong> These are the traps — they <em>feel</em> pluralizable:</li>
+</ul>
+
+<div class="callout">
+  <span class="label">The 32 that refuse an S — NWL2023</span>
+  <p class="noslist">AE&ensp;AM&ensp;AN&ensp;AW&ensp;AX&ensp;DE&ensp;EH&ensp;ET&ensp;EW&ensp;EX&ensp;HM&ensp;IS&ensp;JO&ensp;LO&ensp;MM&ensp;MY&ensp;NA&ensp;NE&ensp;OF&ensp;OI&ensp;OK&ensp;OS&ensp;OW&ensp;OX&ensp;OY&ensp;SH&ensp;TO&ensp;UH&ensp;US&ensp;WE&ensp;XU&ensp;YO</p>
+  <p class="cite" style="margin:0.4rem 0 0">The famous ones: <strong>JO</strong> pluralizes as JOES, not JOS. <strong>AX</strong> and <strong>OX</strong> need four letters (AXES, OXEN). And <strong>XU</strong> is the loneliest word in the list — the only 2 with no hooks at all, front or back.</p>
+</div>
+
+<p>Don't memorize all 32 tonight. Today's drill plants the high-traffic ones; the <a href="../reference/two-to-make-three.html">hook chart</a> is your daily sheet for the rest.</p>
+
+<h2>Drill: will it hook? <span class="cite">(retrieval practice)</span></h2>
+
+<p>Each of these is a two-letter word you know, grown by one letter. Valid or not? Same rules as last time: no peeking, misses come back around, aim for 90%.</p>
+
+<div id="drill"></div>
+
+<h2>Front hooks: the ones hiding in plain sight</h2>
+
+<p>Back hooks get the glory because of S, but front hooks are the sneaky ones — everyday words you never noticed were a 2 wearing a hat. <strong>Tap each to check the breakdown:</strong></p>
+
+<div class="wordgrid" style="grid-template-columns:repeat(auto-fill,minmax(3.6rem,1fr));">
+  <div class="w" data-def="S + HE. The pronoun HE was on the board all along.">SHE</div>
+  <div class="w" data-def="W + HO. Hook a W onto HO.">WHO</div>
+  <div class="w" data-def="T + WO. WO (woe) takes a T.">TWO</div>
+  <div class="w" data-def="G + NU. NU (the Greek letter) grows into an antelope.">GNU</div>
+  <div class="w" data-def="C + HI. HI also takes G, K, and P: GHI, KHI, PHI.">CHI</div>
+  <div class="w" data-def="B + AA. The lava word bleats like a sheep.">BAA</div>
+  <div class="w" data-def="U + DO. A Japanese vegetable — and a great U-dump.">UDO</div>
+  <div class="w" data-def="S + PA. Your S works on the front, too.">SPA</div>
+</div>
+
+<p>This is the skill to carry into your games this week: every time you see a two-letter word on the board, ask <em>"what letters grow this?"</em> — front and back.</p>
+
+<div class="callout win">
+  <span class="label">Your daily habit this week (5 min)</span>
+  Alternate days: the <a href="0001-two-letter-words.html">Lesson 01 drill</a> one day, the <a href="../reference/two-to-make-three.html">2s-to-make-3s hook chart</a> the next. On chart days, cover the right column with your hand and quiz yourself: <em>"AG — does it take an S? What else?"</em> Mixing the two lists (interleaving) is deliberately harder than drilling one — and that difficulty is what makes both stick.
+</div>
+
+<h2>Read this next <span class="cite">(primary source)</span></h2>
+<p>Print <a href="https://www.cross-tables.com/cs.php">&ldquo;The Cheat Sheet&rdquo; (Baron &amp; Lipkin)</a> — the one-page, two-sided list of every NWL2023 word that matters at this stage: all the 2s, all the 3s, and the short J, Q, X, Z words. It's the standard club handout, free to reproduce, and worth laminating exactly as its authors suggest. And when the Word-Building Book is free, its <em>&ldquo;3-letter words built from a 2-letter word&rdquo;</em> section is this exact lesson as a ready-made paper worksheet.</p>
+
+<div class="ask">
+  <strong>I'm your teacher — use me.</strong> Want to know <em>why</em> JOS is illegal but GOS is fine? Curious which hooks score biggest with your favorite tiles? Want a harder drill, or one focused just on the 32 no-S words? Just ask.
+</div>
+
+<div class="pagenav">
+  <span><a href="0001-two-letter-words.html">&larr; Lesson 01: The Two-Letter Words</a> · <a href="../reference/two-to-make-three.html">The Hook Chart</a></span>
+  <span>Next: Lesson 03 — The leave: what you keep matters →</span>
+</div>
+
+<script src="../assets/quiz.js"></script>
+<script src="../assets/defs.js"></script>
+<script>
+  validQuiz('warmup', [
+    { w:'OK', ok:true,  def:'all right; to approve.' },
+    { w:'ZO', ok:false },
+    { w:'EW', ok:true,  def:'expresses disgust.' },
+    { w:'EA', ok:false },
+    { w:'UT', ok:true,  def:'the musical tone now called DO.' },
+    { w:'KO', ok:false },
+    { w:'OI', ok:true,  def:'expresses dismay (variant of OY).' },
+    { w:'VA', ok:false }
+  ]);
+
+  validQuiz('drill', [
+    { w:'QIS', ok:true,  def:'plural of QI. The S-hook play from above.' },
+    { w:'JOS', ok:false }, // JO pluralizes as JOES
+    { w:'ZAS', ok:true,  def:'plural of ZA (pizza).' },
+    { w:'TOS', ok:false },
+    { w:'AXE', ok:true,  def:'AX + E — the only hook AX takes.' },
+    { w:'OKS', ok:false },
+    { w:'KAS', ok:true,  def:'plural of KA (the Egyptian spirit).' },
+    { w:'XUS', ok:false }, // XU has no hooks at all
+    { w:'AAS', ok:true,  def:'plural of AA (the lava). Yes, really.' },
+    { w:'AMS', ok:false }, // AM takes A, I, P, U — not S
+    { w:'GOS', ok:true,  def:'plural of GO (the board game).' },
+    { w:'WES', ok:false },
+    { w:'NOS', ok:true,  def:'plural of NO (a negative reply).' },
+    { w:'LOS', ok:false },
+    { w:'OES', ok:true,  def:'plural of OE (the Faeroese whirlwind).' },
+    { w:'ANS', ok:false }, // AN takes A, D, E, I, T, Y — not S
+    { w:'UTS', ok:true,  def:'plural of UT (the musical tone).' },
+    { w:'OIS', ok:false },
+    { w:'BAS', ok:true,  def:'plural of BA (the Egyptian soul).' },
+    { w:'USS', ok:false }
+  ]);
+</script>
+
+</body>
+</html>
