@@ -131,6 +131,16 @@ em { font-style: italic; }
 .premium.dl { background: var(--dl); } .premium.tl { background: var(--tl); color:#fff; }
 .premium.dw { background: var(--dw); } .premium.tw { background: var(--tw); color:#fff; }
 
+/* ---- Top breadcrumb (every page except the home page) ---- */
+.topnav {
+  font-size: 0.75rem; letter-spacing: 0.06em;
+  margin: -2rem 0 2.2rem;
+}
+.topnav a { color: var(--ink-soft); border-bottom-color: transparent; }
+.topnav a:hover { color: var(--accent); border-bottom-color: var(--rule); }
+.topnav .sep { color: var(--rule); margin: 0 0.45rem; }
+.topnav .here { color: var(--ink-soft); }
+
 /* ---- Footer nav ---- */
 .pagenav {
   margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--rule);
@@ -171,7 +181,7 @@ em { font-style: italic; }
   html { font-size: 12pt; }
   body { padding: 0; max-width: none; background: #fff; }
   a { color: var(--ink); }
-  .ask, .pagenav { display: none; }
+  .ask, .pagenav, .topnav { display: none; }
   .tile, .wordgrid .w { box-shadow: none; }
   .wordgrid .defbox { display: none; }
   .wordgrid .w.open { outline: none; }
