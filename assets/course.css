@@ -109,6 +109,18 @@ em { font-style: italic; }
   text-align: center; padding: 0.25rem 0; background: var(--tile-bg);
   border: 1px solid var(--tile-edge); border-radius: 3px; letter-spacing: 0.05em;
 }
+/* Tap-to-reveal definitions (defs.js) */
+.wordgrid .w[data-def] { cursor: pointer; }
+.wordgrid .w[data-def]:hover { filter: brightness(0.96); }
+.wordgrid .w.open { outline: 2px solid var(--accent); outline-offset: -1px; }
+.wordgrid .defbox {
+  grid-column: 1 / -1;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  font-size: 0.9rem; line-height: 1.4; color: var(--ink);
+  background: #fff; border: 1px solid var(--rule); border-left: 3px solid var(--accent);
+  border-radius: 3px; padding: 0.45rem 0.7rem; margin: 0.1rem 0 0.3rem;
+}
+.wordgrid .defbox strong { font-family: "SF Mono", "Menlo", monospace; letter-spacing: 0.05em; }
 .grouphead {
   font-family: Georgia, serif; font-size: 1.3rem; font-weight: 700; color: var(--accent);
   margin: 1.2rem 0 0.3rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.2rem;
@@ -161,5 +173,7 @@ em { font-style: italic; }
   a { color: var(--ink); }
   .ask, .pagenav { display: none; }
   .tile, .wordgrid .w { box-shadow: none; }
+  .wordgrid .defbox { display: none; }
+  .wordgrid .w.open { outline: none; }
   .callout { break-inside: avoid; }
 }
