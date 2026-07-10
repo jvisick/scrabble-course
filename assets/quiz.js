@@ -5,6 +5,8 @@
       items: [{ w: "QI", ok: true }, { w: "QT", ok: false }, ...]
       Renders one word at a time with two buttons. Tracks score + streak,
       reshuffles missed items to the end so you re-see what you got wrong.
+      Invalid items may carry a `note` (e.g. "Collins-only") appended to
+      the feedback so the reader learns WHY a plausible pair is a trap.
 
    2) flashDeck(mountId, cards)  — self-graded recall flashcards.
       cards: [{ front: "...", back: "..." }, ...]
@@ -59,14 +61,14 @@ function validQuiz(mountId, items) {
       fb.className = 'quiz-fb good';
       fb.innerHTML = it.ok
         ? `✓ Yes — <strong>${it.w}</strong> is valid.${it.def ? ' ' + it.def : ''}`
-        : `✓ Right — <strong>${it.w}</strong> is not in NWL2023.`;
+        : `✓ Right — <strong>${it.w}</strong> is not in NWL2023.${it.note ? ' ' + it.note : ''}`;
     } else {
       streak = 0;
       queue.push(it); // re-see missed items later
       fb.className = 'quiz-fb bad';
       fb.innerHTML = it.ok
         ? `✗ Actually valid — <strong>${it.w}</strong>${it.def ? ': ' + it.def : ''}. You'll see it again.`
-        : `✗ Actually not a word — <strong>${it.w}</strong> is invalid. You'll see it again.`;
+        : `✗ Actually not a word — <strong>${it.w}</strong> is invalid.${it.note ? ' ' + it.note : ''} You'll see it again.`;
     }
     // Replace the answer buttons with a self-paced Next button so the reader
     // controls how long the definition stays up. Focus it so Enter/Space advances.
@@ -86,8 +88,11 @@ function validQuiz(mountId, items) {
         <p>${correct} of ${seen} correct · best streak ${best}.</p>
         <p>${pct >= 90 ? 'Sharp. Come back tomorrow and do it again — spacing is what makes it stick.'
                        : 'Good work. Run it again now, then once more tomorrow.'}</p>
-        <button onclick="location.reload()">Run again ↻</button>
+        <button class="again">Run again ↻</button>
       </div>`;
+    // Restart the SAME drill (reshuffled) rather than reloading the page,
+    // so pages that offer several drills keep the reader's chosen round.
+    mount.querySelector('.again').onclick = () => validQuiz(mountId, items);
   }
 
   render();

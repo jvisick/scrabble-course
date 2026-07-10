@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drills · The Two-Letter Words — Full Workout</title>
+<link rel="stylesheet" href="../assets/course.css">
+<style>
+  .drill-list { list-style:none; padding:0; margin:1.2rem 0; }
+  .drill-list li { margin:0.6rem 0; }
+  .drill-list button {
+    display:block; width:100%; text-align:left; cursor:pointer;
+    font-family:inherit; background:#fff; border:1px solid var(--rule);
+    border-radius:6px; padding:0.9rem 1.1rem;
+    transition:transform 0.06s ease, border-color 0.15s ease;
+  }
+  .drill-list button:hover { border-color:var(--tile-edge); transform:translateY(-1px); }
+  .drill-list .name { font-size:1.1rem; font-weight:600; color:var(--accent); }
+  .drill-list .count {
+    float:right; font-family:"SF Mono","Menlo",monospace; font-size:0.75rem;
+    color:var(--ink-soft); background:var(--tile-bg); border:1px solid var(--tile-edge);
+    border-radius:3px; padding:0.1rem 0.45rem; margin-top:0.15rem;
+  }
+  .drill-list .desc { display:block; color:var(--ink-soft); font-size:0.88rem; margin-top:0.2rem; }
+  .backlink { font-size:0.85rem; margin:0.8rem 0 0; }
+  .running-title { margin:1.6rem 0 0; font-size:1.15rem; font-weight:600; }
+</style>
+</head>
+<body>
+
+<nav class="topnav"><a href="../index.html">Scrabble Course</a><span class="sep">/</span><span class="here">Drills · Two-Letter Words</span></nav>
+
+<p class="kicker">Drills · Pillar 1: Words</p>
+<h1>The Two-Letter Words — Full Workout</h1>
+<p class="subtitle">Every one of the 107, plus the fakes that try to sneak past you.</p>
+
+<p><a href="../lessons/0001-two-letter-words.html">Lesson 01's</a> drill covers only the trickiest handful. These rounds cover the <strong>entire NWL2023 list</strong>: all 107 valid words mixed with 35 plausible fakes, so you can't coast by tapping "valid" on everything. Do a quarter-round daily, or run the full sweep when you want to prove you own the list.</p>
+
+<div id="chooser">
+  <h2>Pick your round</h2>
+  <ul class="drill-list" id="drill-buttons"></ul>
+  <p class="note">Every round shuffles on each run, gives instant feedback with the meaning of each real word, and recycles anything you miss until you get it right. Aim for 90%+ before moving up a round.</p>
+</div>
+
+<div id="running" style="display:none">
+  <p class="running-title" id="running-name"></p>
+  <div id="drill"></div>
+  <p class="backlink"><a href="#" id="back">← Choose a different round</a></p>
+</div>
+
+<div class="ask">
+  <strong>I'm your teacher — use me.</strong> Keep missing the same word? Ask me for the story behind it — a word with a hook in your memory beats raw letters every time. And when the full sweep feels easy, tell me: that's the signal to move to the <a href="../lessons/0002-threes-and-hooks.html">three-letter hooks</a>.
+</div>
+
+<div class="pagenav">
+  <span><a href="../index.html">Course home</a> · <a href="../reference/two-letter-words.html">The 107 Words sheet</a></span>
+  <span><a href="../lessons/0001-two-letter-words.html">Lesson 01: Why the 2s matter →</a></span>
+</div>
+
+<script src="../assets/quiz.js"></script>
+<script src="../assets/twos-data.js"></script>
+<script>
+  // Build validQuiz items from the master data. Collins-only fakes get an
+  // explanatory note so the reader learns which lexicon betrayed them.
+  const COLLINS_NOTE = "It's legal in the international (Collins) list — but not in ours.";
+  function toItems(words, fakes) {
+    return words.map(t => ({ w: t.w, ok: true, def: t.def }))
+      .concat(fakes.map(f => ({ w: f.w, ok: false, note: f.collins ? COLLINS_NOTE : '' })));
+  }
+  const inRange = (w, lo, hi) => w[0] >= lo && w[0] <= hi;
+  const range = (lo, hi) => toItems(
+    TWOS.filter(t => inRange(t.w, lo, hi)),
+    FAKES.filter(f => inRange(f.w, lo, hi))
+  );
+
+  const DRILLS = [
+    { name: 'The Full Sweep', desc: 'All 107 valid words + all 35 fakes, shuffled. The whole list, one sitting — about 15 minutes.',
+      items: () => toItems(TWOS, FAKES) },
+    { name: 'Quarter 1 · A–E', desc: 'The front of the alphabet — including the E-words, the biggest letter-name cluster.',
+      items: () => range('A', 'E') },
+    { name: 'Quarter 2 · F–M', desc: 'F through M — home of GI, HM, KA, KI, and the Collins traps JA and KO.',
+      items: () => range('F', 'M') },
+    { name: 'Quarter 3 · N–S', desc: 'N through S — the 14 O-words live here, alongside fakes like OO, OU, and QA.',
+      items: () => range('N', 'S') },
+    { name: 'Quarter 4 · T–Z', desc: 'T through Z — the power tiles: XI, XU, ZA, plus the trap-dense YU/ZE/ZO corner.',
+      items: () => range('T', 'Z') },
+    { name: 'Traps & Strangers', desc: 'Only the hard stuff: the strange-but-legal words vs. every plausible fake. The final exam.',
+      items: () => toItems(TWOS.filter(t => t.hard), FAKES) },
+  ];
+
+  const chooser = document.getElementById('chooser');
+  const running = document.getElementById('running');
+  const buttons = document.getElementById('drill-buttons');
+
+  DRILLS.forEach(d => {
+    const items = d.items();
+    const li = document.createElement('li');
+    li.innerHTML = `<button><span class="count">${items.length} words</span>
+      <span class="name">${d.name}</span><span class="desc">${d.desc}</span></button>`;
+    li.querySelector('button').onclick = () => start(d);
+    buttons.appendChild(li);
+  });
+
+  function start(d) {
+    chooser.style.display = 'none';
+    running.style.display = '';
+    document.getElementById('running-name').textContent = d.name;
+    validQuiz('drill', d.items());
+    running.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  document.getElementById('back').onclick = (e) => {
+    e.preventDefault();
+    running.style.display = 'none';
+    chooser.style.display = '';
+    document.getElementById('drill').innerHTML = '';
+  };
+</script>
+
+</body>
+</html>
